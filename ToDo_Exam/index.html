@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>ToDoExam</title>
+</head>
+
+<body>
+    <h1>Lista de Tareas</h1>
+    <form action="#" id="userInput">
+        <input type="text" placeholder="Tareas a hacer..." autofocus>
+        <input type="submit" value="+" id="addBtn">
+    </form>
+    <div id="list" class="list-container">
+    </div>
+    <div id="stats">
+    </div>
+    <script src="js/ToDoList.js"></script>
+    <footer>
+        <p>Desarrollo de aplicaciones con tecnología web / <b>Jorge García Espinosa</b> / 31-01-2024</p>
+        <p id="fecha"></p>
+    </footer>
+    <script>
+        //Fecha actual
+        let fechaActual = new Date();
+
+        //Elementos del DOM
+        let fechaElemento = document.getElementById("fecha");
+
+        //Formato Fecha
+        let formatoFecha = fechaActual.getDate() + "-" + (fechaActual.getMonth() < 10 ? "0" : "") + (fechaActual.getMonth() + 1)+ "-" + fechaActual.getFullYear();
+
+        //Asignamos la fecha al elemento
+        fechaElemento.innerHTML = "Fecha: " + formatoFecha;
+        
+    </script>   
+</body>
+
+</html>
